@@ -15,8 +15,8 @@ class App extends React.Component {
     axios.get('api/deals')
       .then(response => {
         this.setState({
-          labels: response.data.labels.map((label) => { return label.name }),
-          values: response.data.values.map((value) => { return value.value.toFixed(2) })
+          labels: response.data.labels.map((label) => { return label }),
+          values: response.data.values.map((value) => { return value.toFixed(2) })
         })
       })
       .catch(error => {

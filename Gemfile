@@ -44,6 +44,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'guard-rspec'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
@@ -53,7 +54,11 @@ group :development do
 end
 
 group :test do
+  gem 'capybara'
   gem 'rspec-rails'
+  gem 'simplecov', :require => false
+  gem 'sinatra'
+  gem 'webmock'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
